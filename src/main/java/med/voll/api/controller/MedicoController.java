@@ -1,6 +1,9 @@
 package med.voll.api.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +13,7 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import med.voll.api.Medico;
 import med.voll.api.medico.DadosCadastroMedico;
+import med.voll.api.medico.DadosListagemMedicos;
 import med.voll.api.medico.MedicoRepository;
 
 @RestController
@@ -18,10 +22,15 @@ public class MedicoController {
 
     @Autowired
     private MedicoRepository repository;
-    
+
     @PostMapping
     @Transactional
     public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
         repository.save(new Medico(dados));
+    }
+
+    @GetMapping
+    public List<DadosListagemMedicos> listar() {
+        return repository.findAll().stream().map(DadosListagemMedicos::new).toList();
     }
 }
