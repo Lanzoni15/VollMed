@@ -1,56 +1,90 @@
-<h1 align="center">VollMed - API de Gestão Médica 🏥</h1>
+<h1 align="center">🏥 VollMed - API de Gestão Médica</h1>
 
 <p align="center">
-  Projeto desenvolvido como parte dos meus estudos em Java e Spring Boot.
+  <strong>API REST para gerenciamento de médicos, pacientes e consultas</strong><br>
+  Projeto criado para consolidar conhecimentos em <strong>Java e Spring Boot</strong> aplicados no backend.
 </p>
 
 ---
 
-## 📦 Sobre o Projeto
+## 📌 Visão Geral
 
-O **VollMed** é uma API REST que simula o sistema de gestão de dados de uma clínica médica, incluindo o cadastro de médicos, pacientes e agendamentos.
+O **VollMed** é uma API REST desenvolvida como parte dos meus estudos em backend Java. A aplicação simula o sistema de gestão de uma clínica médica, permitindo o cadastro e gerenciamento de médicos, pacientes e agendamentos.
 
-Este projeto faz parte do meu portfólio de estudos, com foco em consolidar conhecimentos em:
+O projeto segue boas práticas de desenvolvimento moderno com foco em:
 
-- Desenvolvimento de APIs com **Spring Boot**
-- Integração com Banco de Dados **MySQL**
-- Boas práticas como uso de **DTOs**, **JPA**, e **Lombok**
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-✔ Java 17  
-✔ Spring Boot  
-✔ Spring Data JPA  
-✔ Lombok  
-✔ MySQL  
-✔ Maven  
+- Arquitetura limpa baseada em camadas (MVC)
+- Integração com banco de dados relacional
+- Uso de DTOs para desacoplamento da API
+- Redução de boilerplate com Lombok
 
 ---
 
-## 💻 Como Executar o Projeto
+## ⚙️ Tecnologias e Ferramentas
 
-### Pré-requisitos:
-- Java 17+
-- MySQL instalado e configurado
+- ✔️ Java 17  
+- ✔️ Spring Boot  
+- ✔️ Spring Data JPA  
+- ✔️ Lombok  
+- ✔️ MySQL  
+- ✔️ Maven  
+- ✔️ Postman (para testes)
+
+---
+
+## 🚀 Como Executar o Projeto Localmente
+
+### ✅ Pré-requisitos
+
+- Java 17+ instalado  
+- MySQL instalado e rodando  
 - Maven instalado
 
-### Passos:
+### ▶️ Passos para execução
+
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Lanzoni15/VollMed.git
-2. Configure o arquivo application.properties com as credenciais do seu banco MySQL.
+   cd VollMed
 
-3. Execute o projeto:
-  - mvn spring-boot:run
-  
-4. A API estará disponível em:
-  - http://localhost:9090
+1. Configure o arquivo application.properties com os dados do seu banco MySQL:
+   ```bash
+   spring.datasource.url=jdbc:mysql://localhost:3306/vollmed
+   spring.datasource.username=seu_usuario
+   spring.datasource.password=sua_senha
 
-🎨 Protótipo de Referência
-O layout e conceito visual do projeto foram baseados no protótipo disponível no [Figma - Voll.med](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med).
 
-<b>✨ Autor
-Desenvolvido por Arthur Lanzoni, focado em backend Java e Spring Boot.
-[LinkedIn](https://www.linkedin.com/in/arthur-lanzoni-a838b721a/)</b>
+1. Execute a aplicação:
+   ```bash
+   mvn spring-boot:run
+
+1. Acesse a API em:
+   ```bash
+   (http://localhost:9090/)
+
+## 📐 Protótipo de Interface
+
+O conceito visual da aplicação foi inspirado no protótipo oficial da [Voll.med no Figma](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med).
+
+## 💡 Aprendizados e Destaques Técnicos
+
+Durante o desenvolvimento da API VollMed, aprofundei meus conhecimentos em:
+  - 🧠 Estruturação de projetos com Spring Boot e MVC
+
+  - 🔄 Criação de endpoints RESTful (GET, POST, PUT, DELETE)
+
+  - 🛡️ Validações com Bean Validation e tratamento de erros
+
+  - 📦 Mapeamento de entidades com JPA e integração com MySQL
+
+  - 🧰 Uso de DTOs para transferências seguras de dados
+
+  - 🔍 Testes manuais com Postman e verificação do comportamento da API
+
+  - 🧹 Organização de código limpo e reutilizável com Lombok
+
+## ✨ Autor
+Desenvolvido por Arthur Lanzoni
+
+📚 Estudante de tecnologia com foco em backend Java e Spring Boot
+
