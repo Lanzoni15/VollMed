@@ -1,0 +1,2 @@
+ALTER TABLE pacientes
+ADD COLUMN sintoma VARCHAR(50);
